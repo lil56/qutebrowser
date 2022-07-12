@@ -202,7 +202,7 @@ def test_killed_command(qtbot, tmp_path, py_proc, runner, caplog):
         runner.store_html('')
 
     # Make sure the PID was written to the file, not just the file created
-    time.sleep(0.5)
+    time.sleep(1)
 
     with data_file.open() as f:
         data = json.load(f)
